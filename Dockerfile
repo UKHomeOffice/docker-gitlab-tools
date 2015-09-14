@@ -10,8 +10,8 @@ ADD https://github.com/michaloo/go-cron/releases/download/v0.0.2/go-cron.tar.gz 
 RUN tar xvf /tmp/go-cron.tar -C / && \
     rm -f /tmp/go-cron.tar
 
-ADD bin/gitlab-alert.rb /gitlab-alert.rb
-ADD bin/rub.sh /run.sh
+ADD bin/gitlab-alert.rb /bin/gitlab-alert.rb
+ADD bin/run.sh /run.sh
 
 # every monday at 10am
 ENV SCHEDULE 0 0 10 * * 1
