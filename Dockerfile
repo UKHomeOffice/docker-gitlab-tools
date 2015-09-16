@@ -4,7 +4,8 @@
 FROM fedora:latest
 MAINTAINER Rohith <gambol99@gmail.com>
 
-RUN dnf install -y tar ruby rubygems rubygem-mysql2.x86_64
+RUN dnf install -y tar ruby rubygems rubygem-mysql2.x86_64 && \
+    gem install optionscrapper
 
 ADD https://github.com/michaloo/go-cron/releases/download/v0.0.2/go-cron.tar.gz /tmp/go-cron.tar
 RUN tar xvf /tmp/go-cron.tar -C / && \
